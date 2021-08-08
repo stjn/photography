@@ -1,0 +1,52 @@
+    	html { overflow-y: scroll; }
+
+        body {padding: 0;margin: 0;
+
+            }
+
+		img {
+        	width: 500px;
+        	height: 330px;
+        	overflow: hidden;
+            background-color: #eee;
+			border-width: 0px;
+			float: left;
+			margin-left: 10px;margin-right: 10px;
+            }
+            
+        video {
+        	width: 100%;
+            background-color: #eee;
+        	border-width: 0px;
+            } 
+        
+        img {margin-bottom: 20px;}    
+        
+        #photos {
+        	width: 1040px;
+			margin: 10px auto 10px auto;
+			overflow-y: scrolling;
+        	}
+        	
+        #title
+        {
+        	background-color: #222;
+        	text-align:center;
+        	padding:15px 8px 5px 8px;
+        	margin-left: 0%;
+        	font-family: Helvetica, Arial;
+        	font-size: 8pt;
+        	color: #fff;
+        	letter-spacing:1 px;
+        	text-transform:uppercase;
+        	display: inline-block;
+        	line-height:15px;margin-left: 10px;
+        	
+
+        }	
+
+		#top{
+			width: 1040px;
+			margin: 0 auto 0 auto;
+			
+		}

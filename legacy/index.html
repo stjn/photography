@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Stijn's Photolog</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="icon" type="image/png" href="../other/nikon.png" />
+		<link rel="shortcut icon" type="image/png" href="../other/nikon.png" />
+		
+		<!-- Typekit -->
+		<script type="text/javascript" src="http://use.typekit.com/fxj7glb.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-24185922-1']);
+			  _gaq.push(['_trackPageview']);
+			
+			  (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+		</script>
+		
+		<!-- Style -->
+		<style type="text/css">
+		
+			body{
+				margin:0px;
+				}
+				
+			#gallery{
+	        	width: 930px;
+	        	height: auto;
+	        	background-color: none;
+	        	margin: 0px auto;
+	        	}
+	        	
+			.block{
+				background-color: #eee;
+				height: 200px;
+				width: 300px;
+				float: left;
+				margin: 5px;margin-top: 0px;margin-bottom: 10px;
+				overflow: hidden;
+				border: 0;
+				position:relative;
+				}
+			
+			.block img{height: 100%;}
+			
+			.block a{text-decoration:none;}
+			
+			.date2{
+				font-size: 10pt;
+				font-family: "bree-serif", Georgia;
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				color: #fff;
+				padding: 4px 6px 2px 6px;
+				text-transform:none;
+				background-color:#000;
+				border-radius: 3px;
+				-moz-border-radius: 3px;
+				-webkit-border-radius: 3px;
+				}	
+			
+			.textfield{
+				height: 200px;
+				width: 300px;
+				opacity: 0;
+				position:absolute;
+				-webkit-transition: all 0.5s linear;
+				-moz-transition: all 0.5s linear;
+				-o-transition: all 0.5s linear;
+				-ms-transition: all 0.5s linear;
+				transition:all 0.5s linear;
+				}
+			
+			.textfield:hover{
+				opacity: 0.8;
+				}
+			
+			a img{
+				border: none;
+				}
+				
+			#footer{
+				height: 50px;
+				width: 930px;
+				background-color: none;
+				margin: auto;
+				position:relative;
+				top: 415px;
+				}
+			
+			#title{
+				width: 280px;
+				height: 135px;
+				background-color:#222;
+				color: #fff;
+				font-family: 'BebasNeueRegular';
+				font-size: 85px;
+				float: left;
+				margin: 5px;margin-top: 0px;margin-bottom: 10px;
+				overflow: hidden;
+				padding: 10px;
+				border: 0;
+				line-height:70px;
+				padding-top: 55px;
+				}
+			
+			#label{
+				width: 300px;height: 50px;display:block;background-color:#222;
+				color: #fff;margin-top: 0;margin-left: 5px;margin-bottom: 0px;
+				}
+			
+			@font-face {
+			    font-family: 'BebasNeueRegular';
+			    src: url('../other/fonts/bebasneue/BebasNeue-webfont.eot');
+			    src: url('../other/fonts/bebasneue/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+			         url('../other/fonts/bebasneue/BebasNeue-webfont.woff') format('woff'),
+			         url('../other/fonts/bebasneue/BebasNeue-webfont.ttf') format('truetype'),
+			         url('../other/fonts/bebasneue/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+			    font-weight: normal;
+			    font-style: normal;
+			    }		
+		
+			div.loading-invisible{
+				display:none;
+				}
+		
+			div.loading-visible{
+				display:block;
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				text-align:center;
+				z-index:5000;
+				font-family:"bree-serif",'Helevtica Neue', 'Helvetica', 'Arial';
+				font-size:10pt;
+				font-weight:bold;
+				color:#ccc;
+				background-color:#fff;
+				padding-top:25%;
+				}  
+		  
+		  .medium img{
+		  		width:100%;
+		  		height:auto;
+		  		overflow:hidden;
+		  		margin-top:-50px;
+		  		}
+		</style>
+		
+	</head>
+	<body>
+		<!-- Loading screen -->
+		<div id="loading" class="loading-invisible">
+		  <div>
+		  	<img src="http://stijnout.com/other/loading.gif" style="height:24px;width:24px;background-color:#fff;" alt=""/>
+		  </div>
+		  <p>Loading...</p>
+		</div>
+		<script type="text/javascript">
+		  document.getElementById("loading").className = "loading-visible";
+		  var hideDiv = function(){document.getElementById("loading").className = "loading-invisible";};
+		  var oldLoad = window.onload;
+		  var newLoad = oldLoad ? function(){hideDiv.call(this);oldLoad.call(this);} : hideDiv;
+		  window.onload = newLoad;
+		</script>
+		
+		<!-- Gallery -->
+		<div id="gallery">
+			<div id="label"></div>
+			<div id="title">
+				Stijn's Photolog
+			</div>
+			<div class="block medium">
+				<a href="2012/film/brussels">
+					<div class="textfield">
+						<div class="date2">Brussels</div>
+					</div>
+					<img src="2012/film/brussels/4.jpg" alt=""/>
+					
+				</a>
+			</div>
+			<div class="block">
+				<a href="2012/roadtrip/">
+					<div class="textfield">
+						<div class="date2">France + Spain</div>
+					</div>
+					<img src="2012/roadtrip/_DSC7677.jpg" width="300px" alt=""/>
+					
+				</a>
+			</div>
+			<div class="block">
+				<a href="20120328">
+					<div class="textfield">
+						<div class="date2">Prague</div>
+					</div>
+					<img src="20120328/DSC_6050.jpg" width="300px" alt=""/>
+					
+				</a>
+			</div>
+			<div class="block">
+				<a href="20111219">
+					<div class="textfield">
+						<div class="date2">Berlin</div>
+					</div>
+					<img src="20111219/_DSC5375.jpg" width="300px" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="20111028">
+					<div class="textfield">
+						<div class="date2">Brussels</div>
+					</div>
+					<img src="20111028/6.jpg" width="300px" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="japan35mm">
+					<div class="textfield">
+						<div class="date2">Japan analog</div>
+					</div>
+					<img src="japan35mm/japan35mm17.jpg" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="japandigital">
+					<div class="textfield">
+						<div class="date2">Japan digital</div>
+					</div>
+					<img src="japandigital/_DSC4107.jpg" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="japaninstax">
+					<div class="textfield">
+						<div class="date2">Japan instant</div>
+					</div>
+					<img src="japaninstax/thumb.png" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="20110624">
+					<div class="textfield">
+						<div class="date2">Scheveningen</div>
+					</div>	
+					<img src="20110624/DSC_2811.jpg" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="20110619">
+					<div class="textfield">
+						<div class="date2">Nes</div>
+					</div>
+					<img src="20110619/DSC_2518.jpg" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="20110527">
+					<div class="textfield">
+						<div class="date2">Texel</div>
+					</div>
+					<img src="20110527/DSC_2157.jpg" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="20110519">
+					<div class="textfield">
+						<div class="date2">Nijmegen</div>
+					</div>
+					<img src="20110519/DSC_1995.jpg" alt=""/>
+				</a>
+			</div>
+			<div class="block">
+				<a href="20110513">
+					<div class="textfield">
+						<div class="date2">Den Haag</div>
+					</div>
+					<img src="20110513/1711.jpg" alt=""/>
+				</a>
+			</div>
+		</div>
+		<div id="footer"></div>
+	</body>
+</html>
